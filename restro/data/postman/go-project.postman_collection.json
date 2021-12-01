@@ -1,0 +1,258 @@
+{
+	"variables": [],
+	"info": {
+		"name": "go-project",
+		"_postman_id": "36de0186-56bb-a8ef-6734-b642b2cb047e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Restro",
+			"description": "Assignment",
+			"item": [
+				{
+					"name": "Users",
+					"description": "",
+					"item": [
+						{
+							"name": "Login(Get Token)",
+							"request": {
+								"url": "http://localhost:8081/login",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"roleid\":3,\n\t\"email\":\"skp9@gmail.com\",\n\t\"password\":\"11111\"\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "GET All users",
+							"request": {
+								"url": "http://localhost:8081/users",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MzgzMTMxMTYsInJvbGVfaWQiOjMsInVzZXJfaWQiOjl9.rmJaxqwqqA_0mslN45TrhJbJzJ-U-1qFZNojp2huPIQ",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"_id\":1,\n\t\"email\":\"skp@gmail.com\",\n\t\"password\":\"11111\"\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Create User",
+							"request": {
+								"url": "http://localhost:8081/user",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MzgzMTE1MDksInJvbGVfaWQiOjMsInVzZXJfaWQiOjl9.x1EySemKt94A0xjka_hDHGqtRnmUGvEO2Ldk_vmN5fs",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"name\": \"SKP9\",\n        \"email\": \"skp9@gmail.com\",\n        \"password\": \"11111\",\n        \"address\": [{\n        \t\"address\":\"2681 Overlook Point, Escondido, CA 92029\",\n        \t\"latitude\":33.103265,\n        \t\"longitude\":-117.127675\n        \t\n        }],\n        \"privilege\": [{\n        \t\"roleid\":3\n        }]\n    }"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Logout",
+							"request": {
+								"url": "http://localhost:8081/logout",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MzgzMDk1OTEsInJvbGVfaWQiOjMsInVzZXJfaWQiOjl9.96HUz9hKn5nJNN6ABaXCH8GAzyHungr4tuwDhgqTR0A",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Restaurants",
+					"description": "",
+					"item": [
+						{
+							"name": "GET All resturents",
+							"request": {
+								"url": "http://localhost:8081/restaurants",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MzgzMTMxMTYsInJvbGVfaWQiOjMsInVzZXJfaWQiOjl9.rmJaxqwqqA_0mslN45TrhJbJzJ-U-1qFZNojp2huPIQ",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"_id\":1,\n\t\"email\":\"skp@gmail.com\",\n\t\"password\":\"11111\"\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Create Resturent",
+							"request": {
+								"url": "http://localhost:8081/restaurant",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MzgzMTMxMTYsInJvbGVfaWQiOjMsInVzZXJfaWQiOjl9.rmJaxqwqqA_0mslN45TrhJbJzJ-U-1qFZNojp2huPIQ",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"restaurantname\":\"Food Resturent1\",\n\t\"address\":\"2681 Overlook Point, Escondido, CA 92029\",\n\t\"latitude\":33.103265,\n\t\"longitude\":33.103265\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Dishes",
+					"description": "",
+					"item": [
+						{
+							"name": "GET All dishes ",
+							"request": {
+								"url": "http://localhost:8081/dishes",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MzgzMTMxMTYsInJvbGVfaWQiOjMsInVzZXJfaWQiOjl9.rmJaxqwqqA_0mslN45TrhJbJzJ-U-1qFZNojp2huPIQ",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"_id\":1,\n\t\"email\":\"skp@gmail.com\",\n\t\"password\":\"11111\"\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Create Dish",
+							"request": {
+								"url": "http://localhost:8081/dish",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MzgzMTMxMTYsInJvbGVfaWQiOjMsInVzZXJfaWQiOjl9.rmJaxqwqqA_0mslN45TrhJbJzJ-U-1qFZNojp2huPIQ",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"restaurantid\":1,\n\t\"dishname\":\"Rice\",\n\t\"price\":\"200\",\n\t\"description\":\"Nice Food!\"\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "GET restaurant dishes ",
+							"request": {
+								"url": "http://localhost:8081/dishes/1",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MzgzMTMxMTYsInJvbGVfaWQiOjMsInVzZXJfaWQiOjl9.rmJaxqwqqA_0mslN45TrhJbJzJ-U-1qFZNojp2huPIQ",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"_id\":1,\n\t\"email\":\"skp@gmail.com\",\n\t\"password\":\"11111\"\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		}
+	]
+}
