@@ -178,6 +178,9 @@ func HandlerRouting() {
 	r.HandleFunc("/role/{roid}", Middleware(role.UpdateRole, "UpdateRole")).Methods("PUT")
 	r.HandleFunc("/role/{roid}", Middleware(role.DeleteRole, "DeleteRole")).Methods("DELETE")
 
+	r.HandleFunc("/resources/{roid}", Middleware(role.GetResourcesByRoleID, "GetResourcesByRoleID")).Methods("GET")
+	r.HandleFunc("/resources/{roid}", Middleware(role.SetResourcesToRoleID, "SetResourcesToRoleID")).Methods("POST")
+
 	log.Fatal(http.ListenAndServe(":8081", r))
 
 }

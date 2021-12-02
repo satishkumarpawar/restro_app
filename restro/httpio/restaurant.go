@@ -11,3 +11,13 @@ type Restaurant struct {
 	Latitude       float64 `json:"latitude"`
 	Longitude      float64 `json:"longitude"`
 }
+
+type Restaurants struct {
+	Restaurant Restaurant `json:"restaurant"`
+	Distance   []Distance `json:"distance"`
+}
+
+type Distance struct {
+	UserAddress          string  `json:"useraddress"`
+	DistanceToRestaurant float64 `json:"distancetorestaurant"`
+}

@@ -10,6 +10,7 @@ import (
 	"github.com/gorilla/mux"
 
 	"restro/httpio"
+	"restro/internal/user"
 )
 
 var DB = db.DConn()
@@ -38,8 +39,27 @@ func GetRestaurants(w http.ResponseWriter, r *http.Request) {
 	} else {
 		DB.Find(&restaurants)
 	}
+	//fmt.Println(restaurants)
+	var restaurants1 []httpio.Restaurants
 
-	json.NewEncoder(w).Encode((restaurants))
+	useraddress := user.GetUserAddress(globalvars.Glbvs.UserID)
+	//fmt.Println(restaurants)
+	for _, restaurant := range restaurants {
+		var restaurant1 httpio.Restaurants
+		restaurant1.Restaurant = restaurant
+		var distance1 []httpio.Distance
+		for _, address := range useraddress {
+			var distance httpio.Distance
+			distance.UserAddress = address.Address
+			if address.Latitude != 0 && address.Longitude != 0 && restaurant.Latitude != 0 && restaurant.Longitude != 0 {
+				distance.DistanceToRestaurant = helper.Distance(address.Latitude, address.Longitude, restaurant.Latitude, restaurant.Longitude, "K")
+			}
+			distance1 = append(distance1, distance)
+		}
+		restaurant1.Distance = distance1
+		restaurants1 = append(restaurants1, restaurant1)
+	}
+	json.NewEncoder(w).Encode((restaurants1))
 }
 
 func GetRestaurantByID(w http.ResponseWriter, r *http.Request) {
@@ -51,7 +71,20 @@ func GetRestaurantByID(w http.ResponseWriter, r *http.Request) {
 		DB.Where("id = ?", mux.Vars(r)["rid"]).First(&restaurant)
 	}
 	//DB.First(&restaurant, mux.Vars(r)["rid"])
-	json.NewEncoder(w).Encode((restaurant))
+	var restaurant1 httpio.Restaurants
+	restaurant1.Restaurant = restaurant
+	useraddress := user.GetUserAddress(globalvars.Glbvs.UserID)
+	var distance []httpio.Distance
+	for k, address := range useraddress {
+		distance[k].UserAddress = address.Address
+		if address.Latitude != 0 && address.Longitude != 0 && restaurant.Latitude != 0 && restaurant.Longitude != 0 {
+			distance[k].DistanceToRestaurant = helper.Distance(address.Latitude, address.Longitude, restaurant.Latitude, restaurant.Longitude, "K")
+
+		}
+	}
+	restaurant1.Distance = distance
+
+	json.NewEncoder(w).Encode((restaurant1))
 }
 
 func UpdateRestaurant(w http.ResponseWriter, r *http.Request) {

@@ -60,6 +60,22 @@ func DeleteRole(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode("Role is deleted !!")
 }
 
+func GetResourcesByRoleID(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	var resources []httpio.ResourcesToRoles
+	DB.Where("role_id = ?", mux.Vars(r)["roid"]).Find(&resources)
+	json.NewEncoder(w).Encode((resources))
+}
+
+func SetResourcesToRoleID(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	var resources []httpio.ResourcesToRoles
+	DB.Where("role_id = ?", mux.Vars(r)["roid"]).Delete(&resources)
+	json.NewDecoder(r.Body).Decode(&resources)
+	DB.Create(&resources)
+	json.NewEncoder(w).Encode((resources))
+}
+
 func GetRoleByRoleID(roleid uint64) httpio.UserRole {
 	var role httpio.UserRole
 	DB.Where("id = ?", roleid).First(&role)
