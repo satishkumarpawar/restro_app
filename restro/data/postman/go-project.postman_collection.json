@@ -29,17 +29,67 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"roleid\":3,\n\t\"email\":\"skp9@gmail.com\",\n\t\"password\":\"11111\"\n}"
+									"raw": "{\n\t\"roleid\":1,\n\t\"email\":\"skp@gmail.com\",\n\t\"password\":\"11111\"\n}"
 								},
 								"description": ""
 							},
 							"response": []
 						},
 						{
-							"name": "GET All users",
+							"name": "GET All Users",
 							"request": {
 								"url": "http://localhost:8081/users",
 								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2Mzg0MTc2NzEsInJvbGVfaWQiOjEsInVzZXJfaWQiOjF9.9mlnrlxkwNRYoqpyzHp8vOrMbD5_2blQm-iusdDWEwY",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"_id\":1,\n\t\"email\":\"skp@gmail.com\",\n\t\"password\":\"11111\"\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "GET User By ID",
+							"request": {
+								"url": "http://localhost:8081/user/1",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2Mzg0MTc2NzEsInJvbGVfaWQiOjEsInVzZXJfaWQiOjF9.9mlnrlxkwNRYoqpyzHp8vOrMbD5_2blQm-iusdDWEwY",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"_id\":1,\n\t\"email\":\"skp@gmail.com\",\n\t\"password\":\"11111\"\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Delete User",
+							"request": {
+								"url": "http://localhost:8081/user/8",
+								"method": "DELETE",
 								"header": [
 									{
 										"key": "Content-Type",
@@ -54,7 +104,32 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"_id\":1,\n\t\"email\":\"skp@gmail.com\",\n\t\"password\":\"11111\"\n}"
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Update User",
+							"request": {
+								"url": "http://localhost:8081/user/1",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MzgzMTMxMTYsInJvbGVfaWQiOjMsInVzZXJfaWQiOjl9.rmJaxqwqqA_0mslN45TrhJbJzJ-U-1qFZNojp2huPIQ",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"name\": \"SKP\",\n        \"email\": \"skp@gmail.com\",\n        \"password\": \"11111\",\n        \"address\": [{\n        \t\"address\":\"2681 Overlook Point, Escondido, CA 92029\",\n        \t\"latitude\":33.103265,\n        \t\"longitude\":-117.127675\n        \t\n        },\n        {\n        \t\"address\":\"2681 Overlook Point, Escondido, CA 92029\",\n        \t\"latitude\":0,\n        \t\"longitude\":0\n        \t\n        }],\n        \"privilege\": [{\n        \t\"roleid\":1\n        },\n        {\n        \t\"roleid\":2\n        }]\n    }"
 								},
 								"description": ""
 							},
@@ -79,7 +154,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n        \"name\": \"SKP9\",\n        \"email\": \"skp9@gmail.com\",\n        \"password\": \"11111\",\n        \"address\": [{\n        \t\"address\":\"2681 Overlook Point, Escondido, CA 92029\",\n        \t\"latitude\":33.103265,\n        \t\"longitude\":-117.127675\n        \t\n        }],\n        \"privilege\": [{\n        \t\"roleid\":3\n        }]\n    }"
+									"raw": "{\n        \"name\": \"SKP\",\n        \"email\": \"skp@gmail.com\",\n        \"password\": \"11111\",\n        \"address\": [{\n        \t\"address\":\"2681 Overlook Point, Escondido, CA 92029\",\n        \t\"latitude\":33.103265,\n        \t\"longitude\":-117.127675\n        \t\n        },\n        {\n        \t\"address\":\"2681 Overlook Point, Escondido, CA 92029\",\n        \t\"latitude\":0,\n        \t\"longitude\":0\n        \t\n        }],\n        \"privilege\": [{\n        \t\"roleid\":1\n        },\n        {\n        \t\"roleid\":2\n        }]\n    }"
 								},
 								"description": ""
 							},
@@ -98,7 +173,7 @@
 									},
 									{
 										"key": "token",
-										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MzgzMDk1OTEsInJvbGVfaWQiOjMsInVzZXJfaWQiOjl9.96HUz9hKn5nJNN6ABaXCH8GAzyHungr4tuwDhgqTR0A",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MzgzODg1MTgsInJvbGVfaWQiOjEsInVzZXJfaWQiOjF9.PQ4uMfDFNdtY6PTQLZNQud8yw82ECg524k7FrCaInrE",
 										"description": ""
 									}
 								],
@@ -118,9 +193,34 @@
 					"description": "",
 					"item": [
 						{
-							"name": "GET All resturents",
+							"name": "GET All restaurants",
 							"request": {
 								"url": "http://localhost:8081/restaurants",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2Mzg0MTc2NzEsInJvbGVfaWQiOjEsInVzZXJfaWQiOjF9.9mlnrlxkwNRYoqpyzHp8vOrMbD5_2blQm-iusdDWEwY",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"_id\":1,\n\t\"email\":\"skp@gmail.com\",\n\t\"password\":\"11111\"\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "GET restaurant by ID",
+							"request": {
+								"url": "http://localhost:8081/restaurant/1",
 								"method": "GET",
 								"header": [
 									{
@@ -143,7 +243,57 @@
 							"response": []
 						},
 						{
-							"name": "Create Resturent",
+							"name": "Delete restaurant",
+							"request": {
+								"url": "http://localhost:8081/restaurant/1",
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MzgzMTMxMTYsInJvbGVfaWQiOjMsInVzZXJfaWQiOjl9.rmJaxqwqqA_0mslN45TrhJbJzJ-U-1qFZNojp2huPIQ",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Update restaurant",
+							"request": {
+								"url": "http://localhost:8081/restaurant/1",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MzgzMTMxMTYsInJvbGVfaWQiOjMsInVzZXJfaWQiOjl9.rmJaxqwqqA_0mslN45TrhJbJzJ-U-1qFZNojp2huPIQ",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"restaurantname\":\"Food Resturent1\",\n\t\"address\":\"2681 Overlook Point, Escondido, CA 92029\",\n\t\"latitude\":33.103265,\n\t\"longitude\":-117.127674\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Create restaurant",
 							"request": {
 								"url": "http://localhost:8081/restaurant",
 								"method": "POST",
@@ -161,7 +311,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"restaurantname\":\"Food Resturent1\",\n\t\"address\":\"2681 Overlook Point, Escondido, CA 92029\",\n\t\"latitude\":33.103265,\n\t\"longitude\":33.103265\n}"
+									"raw": "{\n\t\"restaurantname\":\"Food Resturent1\",\n\t\"address\":\"2681 Overlook Point, Escondido, CA 92029\",\n\t\"latitude\":33.103265,\n\t\"longitude\":-117.127674\n}"
 								},
 								"description": ""
 							},
@@ -200,7 +350,32 @@
 							"response": []
 						},
 						{
-							"name": "Create Dish",
+							"name": "GET dish by ID",
+							"request": {
+								"url": "http://localhost:8081/dish/1",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MzgzMTMxMTYsInJvbGVfaWQiOjMsInVzZXJfaWQiOjl9.rmJaxqwqqA_0mslN45TrhJbJzJ-U-1qFZNojp2huPIQ",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"_id\":1,\n\t\"email\":\"skp@gmail.com\",\n\t\"password\":\"11111\"\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Create dish",
 							"request": {
 								"url": "http://localhost:8081/dish",
 								"method": "POST",
@@ -225,7 +400,32 @@
 							"response": []
 						},
 						{
-							"name": "GET restaurant dishes ",
+							"name": "Update dish",
+							"request": {
+								"url": "http://localhost:8081/dish/1",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MzgzMTMxMTYsInJvbGVfaWQiOjMsInVzZXJfaWQiOjl9.rmJaxqwqqA_0mslN45TrhJbJzJ-U-1qFZNojp2huPIQ",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"restaurantid\":1,\n\t\"dishname\":\"Rice\",\n\t\"price\":\"200\",\n\t\"description\":\"Nice Food!\"\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "GET dishes by restaurant ID",
 							"request": {
 								"url": "http://localhost:8081/dishes/1",
 								"method": "GET",
@@ -248,6 +448,352 @@
 								"description": ""
 							},
 							"response": []
+						},
+						{
+							"name": "Delete dish",
+							"request": {
+								"url": "http://localhost:8081/dish/1",
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MzgzMTMxMTYsInJvbGVfaWQiOjMsInVzZXJfaWQiOjl9.rmJaxqwqqA_0mslN45TrhJbJzJ-U-1qFZNojp2huPIQ",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Master Setups",
+					"description": "",
+					"item": [
+						{
+							"name": "User Resources",
+							"description": "",
+							"item": [
+								{
+									"name": "GET All resources",
+									"request": {
+										"url": "http://localhost:8081/resources",
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"description": ""
+											},
+											{
+												"key": "token",
+												"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2Mzg0NTk5ODAsInJvbGVfaWQiOjEsInVzZXJfaWQiOjF9.wMFLcflV38dNxBm6NbREvQbKGhLY-3mI7MQXoLl6aZM",
+												"description": ""
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"_id\":1,\n\t\"email\":\"skp@gmail.com\",\n\t\"password\":\"11111\"\n}"
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "GET resources by role ID",
+									"request": {
+										"url": "http://localhost:8081/resources/1",
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"description": ""
+											},
+											{
+												"key": "token",
+												"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2Mzg0MTg2MDMsInJvbGVfaWQiOjEsInVzZXJfaWQiOjF9.Gy0Ze03pxg1BybouHQUYB_rtsbY2uNjXs93VmWY4Oys",
+												"description": ""
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"_id\":1,\n\t\"email\":\"skp@gmail.com\",\n\t\"password\":\"11111\"\n}"
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "GET resource by ID",
+									"request": {
+										"url": "http://localhost:8081/resource/1",
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"description": ""
+											},
+											{
+												"key": "token",
+												"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MzgzMTMxMTYsInJvbGVfaWQiOjMsInVzZXJfaWQiOjl9.rmJaxqwqqA_0mslN45TrhJbJzJ-U-1qFZNojp2huPIQ",
+												"description": ""
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"_id\":1,\n\t\"email\":\"skp@gmail.com\",\n\t\"password\":\"11111\"\n}"
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "Create resource",
+									"request": {
+										"url": "http://localhost:8081/resource",
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"description": ""
+											},
+											{
+												"key": "token",
+												"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MzgzMTMxMTYsInJvbGVfaWQiOjMsInVzZXJfaWQiOjl9.rmJaxqwqqA_0mslN45TrhJbJzJ-U-1qFZNojp2huPIQ",
+												"description": ""
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"resource_name\":\"all\"\n\t\n}"
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "Set resources to roles",
+									"request": {
+										"url": "http://localhost:8081/resources/2",
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"description": ""
+											},
+											{
+												"key": "token",
+												"value": "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2Mzg0MTkxMzAsInJvbGVfaWQiOjEsInVzZXJfaWQiOjF9.DTEnxouIjkWWN60GFFbAeZRvMI-D89E7DNCxBS3SIGs",
+												"description": ""
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n   \n     {\n        \"roleid\": 2,\n        \"resourceid\": 2\n    },\n    {\n        \"roleid\": 2,\n        \"resourceid\": 3\n    },\n    {\n        \"roleid\": 2,\n        \"resourceid\": 4\n    },\n    {\n        \"roleid\": 2,\n        \"resourceid\": 5\n    },\n    {\n        \"roleid\": 2,\n        \"resourceid\": 6\n    },\n    {\n        \"roleid\": 2,\n        \"resourceid\": 7\n    },\n    {\n        \"roleid\": 2,\n        \"resourceid\": 8\n    },\n    {\n        \"roleid\": 2,\n        \"resourceid\": 9\n    },\n    {\n        \"roleid\": 2,\n        \"resourceid\": 10\n    },\n    {\n        \"roleid\": 2,\n        \"resourceid\": 11\n    },\n    {\n        \"roleid\": 2,\n        \"resourceid\": 12\n    },\n    {\n        \"roleid\": 2,\n        \"resourceid\": 13\n    },\n    {\n        \"roleid\": 2,\n        \"resourceid\": 14\n    },\n    {\n        \"roleid\": 2,\n        \"resourceid\": 15\n    },\n    {\n        \"roleid\": 2,\n        \"resourceid\": 16\n    },\n    {\n        \"roleid\": 2,\n        \"resourceid\": 17\n    },\n    {\n        \"roleid\": 2,\n        \"resourceid\": 18\n    },\n    {\n        \"roleid\": 2,\n        \"resourceid\": 19\n    },\n    {\n        \"roleid\": 2,\n        \"resourceid\": 23\n    },\n    {\n        \"roleid\": 2,\n        \"resourceid\": 24\n    }\n]"
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "Update resource",
+									"request": {
+										"url": "http://localhost:8081/resource/1",
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"description": ""
+											},
+											{
+												"key": "token",
+												"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MzgzMTMxMTYsInJvbGVfaWQiOjMsInVzZXJfaWQiOjl9.rmJaxqwqqA_0mslN45TrhJbJzJ-U-1qFZNojp2huPIQ",
+												"description": ""
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"resource_name\":\"all\"\n\t\n}"
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "Delete resource",
+									"request": {
+										"url": "http://localhost:8081/resource/1",
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"description": ""
+											},
+											{
+												"key": "token",
+												"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MzgzMTMxMTYsInJvbGVfaWQiOjMsInVzZXJfaWQiOjl9.rmJaxqwqqA_0mslN45TrhJbJzJ-U-1qFZNojp2huPIQ",
+												"description": ""
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "User Roles",
+							"description": "",
+							"item": [
+								{
+									"name": "GET All Roles",
+									"request": {
+										"url": "http://localhost:8081/roles",
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"description": ""
+											},
+											{
+												"key": "token",
+												"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2Mzg0NTk5ODAsInJvbGVfaWQiOjEsInVzZXJfaWQiOjF9.wMFLcflV38dNxBm6NbREvQbKGhLY-3mI7MQXoLl6aZM",
+												"description": ""
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"_id\":1,\n\t\"email\":\"skp@gmail.com\",\n\t\"password\":\"11111\"\n}"
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "GET role by ID",
+									"request": {
+										"url": "http://localhost:8081/role/2",
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"description": ""
+											},
+											{
+												"key": "token",
+												"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MzgzMTMxMTYsInJvbGVfaWQiOjMsInVzZXJfaWQiOjl9.rmJaxqwqqA_0mslN45TrhJbJzJ-U-1qFZNojp2huPIQ",
+												"description": ""
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"_id\":1,\n\t\"email\":\"skp@gmail.com\",\n\t\"password\":\"11111\"\n}"
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "Update role",
+									"request": {
+										"url": "http://localhost:8081/role/1",
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"description": ""
+											},
+											{
+												"key": "token",
+												"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MzgzMTMxMTYsInJvbGVfaWQiOjMsInVzZXJfaWQiOjl9.rmJaxqwqqA_0mslN45TrhJbJzJ-U-1qFZNojp2huPIQ",
+												"description": ""
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"role\":\"Admin\"\n}"
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "Create role",
+									"request": {
+										"url": "http://localhost:8081/role",
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"description": ""
+											},
+											{
+												"key": "token",
+												"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MzgzMTMxMTYsInJvbGVfaWQiOjMsInVzZXJfaWQiOjl9.rmJaxqwqqA_0mslN45TrhJbJzJ-U-1qFZNojp2huPIQ",
+												"description": ""
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"role\":\"Sub Admin3\"\n}"
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "Delete role",
+									"request": {
+										"url": "http://localhost:8081/role/1",
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"description": ""
+											},
+											{
+												"key": "token",
+												"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2MzgzMTMxMTYsInJvbGVfaWQiOjMsInVzZXJfaWQiOjl9.rmJaxqwqqA_0mslN45TrhJbJzJ-U-1qFZNojp2huPIQ",
+												"description": ""
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
 						}
 					],
 					"_postman_isSubFolder": true
